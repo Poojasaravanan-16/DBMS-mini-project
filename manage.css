@@ -1,0 +1,140 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+/* Container Styling */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+    color: #ccc;
+}
+
+/* Add Grocery Section */
+.add-grocery-section {
+    padding: 20px;
+    background-color: #333;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.add-grocery-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ff6600;
+}
+
+.add-grocery-section label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #fdfdfd;
+}
+
+.add-grocery-section input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #666;
+    border-radius: 4px;
+    background-color: #222;
+    color: white;
+}
+
+.add-grocery-section .btn {
+    padding: 10px 15px;
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-grocery-section .btn:hover {
+    background-color: #ff9800;
+}
+
+/* Grocery List Section */
+.grocery-list-section {
+    padding: 20px;
+    background-color: #444;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.grocery-list-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ff6600;
+}
+
+.grocery-list-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.grocery-list-section table th,
+.grocery-list-section table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #666;
+}
+
+.grocery-list-section table th {
+    background-color: #222;
+    color: white;
+}
+
+.grocery-list-section input {
+    width: 90%;
+    padding: 5px;
+    border: 1px solid #666;
+    border-radius: 4px;
+    background-color: #222;
+    color: white;
+}
+
+.grocery-list-section .edit-btn,
+.grocery-list-section .delete-btn {
+    padding: 5px 10px;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.grocery-list-section .edit-btn:hover,
+.grocery-list-section .delete-btn:hover {
+    background-color: #ff9800;
+}

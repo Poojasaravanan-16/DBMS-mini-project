@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Groceries - Grocery Management System</title>
+    <link rel="stylesheet" href="static/view.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>View Your Groceries</h1>
+            <p>Here is the list of all the groceries in your inventory.</p>
+        </header>
+
+        <!-- Groceries Table -->
+        <div class="table-container">
+            <h2>Current Groceries</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Category</th>
+                        <th>Price per Unit</th>
+                        <th>Total Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for grocery in groceries %}
+                    <tr>
+                        <td>{{ grocery[0] }}</td> <!-- Grocery Name -->
+                        <td>{{ grocery[1] }}</td> <!-- Quantity -->
+                        <td>Not Specified</td> <!-- Category, modify as needed -->
+                        <td>${{ grocery[2] }}</td> <!-- Price per unit -->
+                        <td>${{ grocery[3] }}</td> <!-- Total price (calculated) -->
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

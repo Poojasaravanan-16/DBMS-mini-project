@@ -1,0 +1,111 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #000; /* Black background */
+    font-family: 'Montserrat', sans-serif;
+    color: #fff; /* White text */
+}
+
+/* Container for the page */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Title box styling */
+.title-box {
+    background-color: #222; /* Dark gray */
+    padding: 20px;
+    border-radius: 40px;
+    margin-bottom: 70px;
+}
+
+.title-box h1 {
+    font-size: 1.8em;
+    color: #fff;
+}
+
+/* Login box styling */
+.login-box {
+    background-color: #222; /* Dark gray */
+    padding: 30px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px; /* Limit width */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+/* Login box title */
+.login-box h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color:#fff;
+}
+
+/* Form labels and inputs */
+.login-box label {
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+    font-weight: 600;
+    color:#ee7f36
+}
+
+.login-box input {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Login button */
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff6600; /* Orange */
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for login button */
+.login-btn:hover {
+    background-color: #ff9800;
+}
+
+/* Register link */
+.register-link {
+    margin-top: 15px;
+    font-size: 0.9em;
+}
+
+.register-link a {
+    color: #ff6600; /* Orange link */
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link a:hover {
+    background-color: #ff9800;
+}

@@ -1,0 +1,110 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #000; /* Black background */
+    font-family: 'Montserrat', sans-serif;
+    color: #fff; /* White text */
+}
+
+/* Container for the page */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Title box styling */
+.title-box {
+    background-color: #222; /* Dark gray */
+    padding: 20px;
+    border-radius: 40px;
+    margin-bottom: 70px;
+}
+
+.title-box h1 {
+    font-size: 1.8em;
+    color: #fff;
+}
+
+/* Register box styling */
+.register-box {
+    background-color: #222; /* Dark gray */
+    padding: 30px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px; /* Limit width */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+/* Register box title */
+.register-box h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+/* Form labels and inputs */
+.register-box label {
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+    font-weight: 600;
+    color:#ee7f36
+}
+
+.register-box input {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Register button */
+.register-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff6600; /* Orange */
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for register button */
+.register-btn:hover {
+    background-color: #ff9800;
+}
+
+/* Login link */
+.login-link {
+    margin-top: 15px;
+    font-size: 0.9em;
+}
+
+.login-link a {
+    color: #ff6600; /* Orange link */
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-link a:hover {
+    background-color: #ff9800;
+}

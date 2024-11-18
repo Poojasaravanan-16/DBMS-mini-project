@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Groceries - Grocery Management System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/manage.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Grocery Management System</h1>
+            <p>Manage your groceries efficiently by adding, editing, and deleting items.</p>
+        </header>
+
+        <!-- Add Grocery Section -->
+        <div class="add-grocery-section">
+            <h2>Add New Grocery</h2>
+            <form action="/add_grocery" method="POST">
+                <label for="grocery-name">Grocery Name</label>
+                <input type="text" id="grocery-name" name="name" required placeholder="Enter grocery name">
+
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity" name="quantity" required placeholder="Enter quantity">
+
+                <label for="price">Price</label>
+                <input type="number" id="price" name="price" required placeholder="Enter price per unit">
+
+                <button type="submit" class="btn">Add Grocery</button>
+            </form>
+        </div>
+
+        <!-- Grocery List Section -->
+        <div class="grocery-list-section">
+            <h2>Your Grocery List</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>User ID</th>
+                        <th>Grocery Name</th>
+                        <th>Quantity</th>
+                        <th>Price Per Unit</th>
+                        <th>Total Price</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- This section will dynamically display the grocery list using a templating language -->
+                    {% for grocery in groceries %}
+                    <tr>
+                        <!-- Edit Form -->
+                        <form action="/update_grocery/{{ grocery.id }}" method="POST">
+                            <td>
+                                {{users.id}}
+                            </td>
+                            <td>
+                                <input type="text" name="name" value="{{ grocery.name }}" required>
+                            </td>
+                            <td>
+                                <input type="number" name="quantity" value="{{ grocery.quantity }}" required>
+                            </td>
+                            <td>
+                                <input type="number" name="price" value="{{ grocery.price }}" required>
+                            </td>
+                            <td>
+                                <input type="number" name="total price" value="{{grocery.price*grocery.quantity}}" required>
+                            </td>
+                            <td>
+                                <button type="submit" class="edit-btn">Update</button>
+                            </td>
+                        </form>
+                        <!-- Delete Form -->
+                        <td>
+                            <form action="/delete_grocery/{{ grocery.id }}" method="POST" style="display:inline;">
+                                <button type="submit" class="delete-btn" onclick="return confirm('Are you sure you want to delete this item?');">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
